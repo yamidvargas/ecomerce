@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- https://material.io/resources/icons/?style=baseline -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!--https://material.io/resources/icons/?style=twotone -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <input type="hidden" autocomplete="off" id="position" value="0" />
+    <div class="wrapper">
+      <div class="nav__mobile" id="nav__mobile">
+        <div
+          class="div-search div-search-mobile d-flex align-items-center justify-content-between w-100"
+        >
+          <input
+            type="text"
+            class="w-100 search-producto"
+            id="search-producto--mobile"
+            placeholder="¿Qué deseas buscar?"
+          />
+          <button type="button" class="btn" id="btn__clear--mobile">
+            <span class="material-icons-two-tone">close</span>
+          </button>
+          <button type="button" class="btn" id="btn__buscar--mobile">
+            <span class="material-icons-two-tone">search</span>
+          </button>
+        </div>
+      </div>
+      <div
+        class="header d-flex align-items-center justify-content-between padding-left-right-80 width-100"
+      >
+        <div
+          class="header-logo-search d-flex align-items-center justify-content-between"
+        >
+          <a href="./" class="home">
+            <img src="img/logos/logo-transparente.png" alt="logo" />
+          </a>
+
+          <div
+            class="div-search d-flex align-items-center justify-content-between"
+          >
+            <input
+              type="text"
+              placeholder="¿Qué deseas buscar?"
+              class="search-producto"
+              id="search-producto"
+            />
+            <button
+              type="button"
+              class="btn"
+              id="btn__limpiar"
+              style="opacity: 0"
+            >
+              <span class="material-icons-two-tone">close</span>
+            </button>
+            <button type="button" class="btn" id="btn__buscar">
+              <span class="material-icons-two-tone">search</span>
+            </button>
+          </div>
+        </div>
+        <div
+          class="header-right d-flex align-items-center justify-content-between"
+        >
+          <button class="mr-2 btn-cart" id="btnShowFavorites">
+            <span class="material-icons-two-tone"> favorite </span>
+            <span class="cantidad" id="cantidadFavorite">0</span>
+          </button>
+          <button class="mr-2 btn-cart" id="btnShowCart">
+            <span class="material-icons-two-tone"> shopping_basket </span>
+            <span class="cantidad" id="cantidadCart">0</span>
+          </button>
+          <a
+            href="login.html"
+            class="btn btn-primary d-flex align-items-center justify-content-between"
+          >
+            <span class="material-icons-two-tone mr-2">account_circle</span>
+            LOGIN
+          </a>
+        </div>
+      </div>
+
+      <div class="hero">
+        <div class="carrousel">
+          <div class="grande mt-2">
+            <img class="img" src="img/heros/hero1.png" alt="hero1" />
+            <img class="img" src="img/heros/hero2.png" alt="hero1" />
+            <img class="img" src="img/heros/hero3.png" alt="hero1" />
+            <img class="img" src="img/heros/hero4.png" alt="hero1" />
+            <img class="img" src="img/heros/hero5.png" alt="hero1" />
+          </div>
+
+          <div class="slider__btn slider__btn--left" id="btn-left">
+            <span class="material-icons-two-tone"> arrow_back_ios </span>
+          </div>
+
+          <div class="slider__btn slider__btn--right" id="btn-right">
+            <span class="material-icons-two-tone"> arrow_forward_ios </span>
+          </div>
+
+          <ul class="puntos">
+            <li class="punto active"></li>
+            <li class="punto"></li>
+            <li class="punto"></li>
+            <li class="punto"></li>
+            <li class="punto"></li>
+          </ul>
+        </div>
+      </div>
+
+      <article id="productos" class="section-productos padding-left-right-80"></article>
+
+      <div
+        class="info padding-left-right-80 d-flex align-items-center justify-content-between w-100"
+      >
+        <div
+          class="info__left d-flex align-items-center justify-content-between"
+        >
+          <div class="info__left--img w-100 scroll-content fadeTop">
+            <img src="img/logos/logo-transparente.png" class="w-100" alt="" />
+          </div>
+          <div class="info__left--lista scroll-content fadeTop">
+            <ul>
+              <li>
+                <a href="#"
+                  ><i class="material-icons-two-tone mr-2">people_alt</i>
+                  Quienes Somos</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="material-icons-two-tone mr-2">description</i>
+                  Políticas de privacidad</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="material-icons-two-tone mr-2">diversity_1</i>
+                  Programa de fidelidad</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="material-icons-two-tone mr-2">storefront</i>
+                  Nuestras Tiendas</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="material-icons-two-tone mr-2">diversity_3</i>
+                  Quiero ser Franquiciado</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="material-icons-two-tone mr-2">where_to_vote</i>
+                  Anuncie Aquí</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="info__right w-100 scroll-content fadeTop">
+          <h4>Hable con nosotros</h4>
+          <br />
+          <form action="" id="formulario">
+            <div class="input-container mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="nombre"
+                name="nombre"
+                autocomplete="off"
+              />
+              <label for="nombre">Nombre</label>
+              <span class="error" aria-live="polite" id="error-nombre"></span>
+            </div>
+            <div class="textarea-container mb-3">
+              <textarea
+                name="mensaje"
+                class="form-control"
+                id="mensaje"
+                rows="10"
+              ></textarea>
+              <label for="mensaje">Mensaje</label>
+              <span class="error" aria-live="polite" id="error-mensaje"></span>
+            </div>
+            <div class="button-container">
+              <button type="submit" class="btn btn-primary" id="btnDone">
+                Enviar mensaje
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <footer
+        class="footer padding-left-right-80 d-flex align-items-center justify-content-between w-100"
+      >
+        <div
+          class="footer-content__left d-flex align-items-center justify-content-between"
+        >
+          <img src="img/logos/logo-wilmer2.png" alt="logo" />
+        </div>
+        <div
+          class="footer-content__right text-center d-flex align-items-center justify-content-between flex-direction-column"
+        >
+          <p>Desarrollado por Wilmer Ortiz Castillo</p>
+          <p>2022</p>
+        </div>
+      </footer>
+
+      <div class="notification" id="notification"></div>
+      <!-- Cart -->
+      <div class="cart" id="cart">
+        <div class="cart__header d-flex">
+          <div class="cart__header--title">
+            <h4>Cart</h4>
+          </div>
+          <button
+            class="btn btn-primary d-flex align-items-center justify-content-center"
+            id="btnCloseCart"
+          >
+            <span class="material-icons-two-tone"> close </span>
+          </button>
+        </div>
+        <div class="cart__content" id="cart__content"></div>
+        <div
+          class="cart__footer d-flex align-items-center justify-content-between w-100"
+        >
+          <div class="cart__footer--total text-center">
+            <p>TOTAL</p>
+            <p id="totalPagar">$ 0.00</p>
+          </div>
+          <div class="cart__footer--btn">
+            <button
+              class="btn btn-primary d-flex align-items-center justify-content-center"
+            >
+              <span class="material-icons-two-tone">
+                shopping_cart_checkout
+              </span>
+              Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- End Cart -->
+    </div>
+
+    <script src="js/formulario.js"></script>
+    <!--<script src="js/data/data.js"></script>-->
+    <script src="js/script.js"></script>
+    <script src="js/app.js"></script>
+
+    <script type="module" src="controllers/more.controller.js"></script>
+  </body>
+</html>

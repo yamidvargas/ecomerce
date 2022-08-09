@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Agregar producto</title>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+        rel="stylesheet"
+      />
+
+      <!-- https://material.io/resources/icons/?style=baseline -->
+      <link
+        href="https://fonts.googleapis.com/css2?family=Material+Icons"
+        rel="stylesheet"
+      />
+
+      <!--https://material.io/resources/icons/?style=twotone -->
+      <link
+        href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone"
+        rel="stylesheet"
+      />
+
+      <link rel="stylesheet" href="css/styles.css" />
+    </head>
+  </head>
+  <body>
+    <div class="wrapper" style="margin-top: 100px">
+      <div class="nav__mobile" id="nav__mobile">
+        <div
+          class="div-search div-search-mobile d-flex align-items-center justify-content-between w-100"
+        >
+          <input type="text" class="w-100" placeholder="¿Qué deseas buscar?" />
+          <button>
+            <span class="material-icons-two-tone">search</span>
+          </button>
+        </div>
+      </div>
+      <div
+        class="header d-flex align-items-center justify-content-between padding-left-right-80 width-100"
+      >
+        <div
+          class="header-logo-search d-flex align-items-center justify-content-between"
+        >
+          <a href="./" class="home">
+            <img src="img/logos/logo-transparente.png" alt="logo" />
+          </a>
+          <div
+            class="div-search d-flex align-items-center justify-content-between"
+          >
+            <input type="text" placeholder="¿Qué deseas buscar?" />
+            <button>
+              <span class="material-icons-two-tone">search</span>
+            </button>
+          </div>
+        </div>
+        <div
+          class="header-right d-flex align-items-center justify-content-between"
+        >
+          <a
+            href="admin.html"
+            class="btn btn-primary d-flex align-items-center justify-content-between"
+          >
+            <span class="material-icons-two-tone mr-2">view_module</span>
+            Listar
+          </a>
+        </div>
+      </div>
+      <div class="padding-left-right-80 add-producto w-100">
+        <div class="div__add-producto">
+          <form action="" id="formularioProduct" class="w-100">
+            <h3 class="text-center mb-3">AGREGAR PRODUCTO</h3>
+            <div class="input-container mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="url"
+                name="url"
+                autocomplete="off"
+              />
+              <label for="url">Url de la imagen</label>
+              <span class="error" aria-live="polite" id="error-url"></span>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+              <div class="input-container mb-3 w-100">
+                <label for="categoria" style="top: 21%">Categoría</label>
+                <select name="categoria" id="categoria" class="form-control"></select>
+                <span
+                  class="error"
+                  aria-live="polite"
+                  id="error-categoria"></span>
+              </div>
+              <a href="#modal-category" type="button" class="btn btn-primary" style="margin-top:-20px">
+                <span class="material-icons-two-tone">add</span>
+              </a>
+            </div>
+            <div class="input-container mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="producto"
+                name="producto"
+                autocomplete="off"
+              />
+              <label for="producto">Nombre del producto</label>
+              <span class="error" aria-live="polite" id="error-producto"></span>
+            </div>
+            <div class="input-container mb-3">
+              <input
+                type="number"
+                class="form-control"
+                id="precio"
+                name="precio"
+                autocomplete="off"
+                step="0.01"
+              />
+              <label for="precio">Precio</label>
+              <span class="error" aria-live="polite" id="error-precio"></span>
+            </div>
+            <div class="textarea-container mb-3">
+              <textarea
+                name="desProducto"
+                class="form-control"
+                id="desProducto"
+                rows="10"
+                autocomplete="off"
+              ></textarea>
+              <label for="desProducto">Descripción</label>
+              <span
+                class="error"
+                aria-live="polite"
+                id="error-desProducto"
+              ></span>
+            </div>
+            <div class="button-container">
+              <button
+                type="submit"
+                class="btn btn-primary d-flex align-items-center justify-content-center w-100"
+                id="btnDoneAdd"
+              >
+                <span class="material-icons-two-tone mr-2">save</span> REGISTRAR
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div
+        class="info padding-left-right-80 d-flex align-items-center justify-content-between w-100"
+      >
+        <div
+          class="info__left d-flex align-items-center justify-content-between"
+        >
+          <div class="info__left--img w-100 scroll-content fadeTop">
+            <img src="img/logos/logo-transparente.png" class="w-100" alt="" />
+          </div>
+          <div class="info__left--lista scroll-content fadeTop">
+            <ul>
+              <li>
+                <a href="#"
+                  ><span class="material-icons-two-tone mr-2">people_alt</span>
+                  Quienes Somos</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><span class="material-icons-two-tone mr-2">description</span>
+                  Políticas de privacidad</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><span class="material-icons-two-tone mr-2">diversity_1</span>
+                  Programa de fidelidad</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><span class="material-icons-two-tone mr-2">storefront</span>
+                  Nuestras Tiendas</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><span class="material-icons-two-tone mr-2">diversity_3</span>
+                  Quiero ser Franquiciado</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><span class="material-icons-two-tone mr-2"
+                    >where_to_vote</span
+                  >
+                  Anuncie Aquí</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="info__right w-100 scroll-content fadeTop">
+          <h4>Hable con nosotros</h4>
+          <br />
+          <form action="" id="formulario">
+            <div class="input-container mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="nombre"
+                name="nombre"
+                autocomplete="off"
+              />
+              <label for="nombre">Nombre</label>
+              <span class="error" aria-live="polite" id="error-nombre"></span>
+            </div>
+            <div class="textarea-container mb-3">
+              <textarea
+                name="mensaje"
+                class="form-control"
+                id="mensaje"
+                rows="10"
+                autocomplete="off"
+              ></textarea>
+              <label for="mensaje">Mensaje</label>
+              <span class="error" aria-live="polite" id="error-mensaje"></span>
+            </div>
+            <div class="button-container">
+              <button type="submit" class="btn btn-primary" id="btnDone">
+                Enviar mensaje
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="notification" id="notification"></div>
+      <footer
+        class="footer padding-left-right-80 d-flex align-items-center justify-content-between w-100"
+      >
+        <div
+          class="footer-content__left d-flex align-items-center justify-content-between"
+        >
+          <img src="img/logos/logo-wilmer2.png" alt="logo" />
+        </div>
+        <div
+          class="footer-content__right text-center d-flex align-items-center justify-content-between flex-direction-column"
+        >
+          <p>Desarrollado por Wilmer Ortiz Castillo</p>
+          <p>2022</p>
+        </div>
+      </footer>
+    </div>
+
+    <div id="modal-category" class="modal" role="dialog">
+      <div class="modal-content modal-sm">
+        <div class="modal-header">
+          <h5 class="modal-title">Categorías</h5>
+          <a href="#" type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <span class="material-icons-two-tone">close</span>
+            </span>
+          </a>
+        </div>
+        <div class="modal-body">
+          <form action="" id="formCategory">
+            <div class="input-container mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="category"
+                name="category"
+                autocomplete="off"
+              />
+              <label for="category">Nombre de la categoría</label>
+              <span class="error" aria-live="polite" id="error-category"></span>
+            </div>
+            <div class="button-container">
+              <button
+                type="submit"
+                class="btn btn-primary d-flex align-items-center justify-content-center w-100"
+                id="btnAddCategory"
+              >
+                <span class="material-icons-two-tone mr-2">save</span> REGISTRAR
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script type="module" src="js/add.js"></script>
+    <script src="js/formulario.js"></script>
+    <script src="controllers/admin.controller.js"></script>
+  </body>
+</html>
